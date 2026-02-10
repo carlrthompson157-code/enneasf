@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "SnapQR Extension",
+  "version": "0.1.0",
+  "description": "Capture, compress, and generate QR codes from screenshots.",
+  "permissions": ["activeTab", "scripting", "storage", "contextMenus"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "SnapQR"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "commands": {
+    "capture-screenshot": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+S",
+        "mac": "Command+Shift+S"
+      },
+      "description": "Capture visible tab"
+    }
+  }
+}

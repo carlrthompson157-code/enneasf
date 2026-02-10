@@ -1,0 +1,133 @@
+:root {
+  color-scheme: light;
+  font-family: "Inter", system-ui, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #f5f6f8;
+  color: #1d1f23;
+}
+
+.app {
+  width: 360px;
+  padding: 16px;
+  box-sizing: border-box;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.header p {
+  margin: 4px 0 12px;
+  font-size: 12px;
+  color: #5f6670;
+}
+
+.thumbnail {
+  background: #fff;
+  border-radius: 8px;
+  padding: 8px;
+  min-height: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border: 1px solid #e0e4ea;
+}
+
+.thumbnail img {
+  max-width: 100%;
+  max-height: 140px;
+  display: none;
+}
+
+.thumbnail p {
+  margin: 0;
+  font-size: 12px;
+  color: #8b919b;
+}
+
+.controls {
+  margin-top: 12px;
+}
+
+.control-row,
+.action-row {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+button {
+  border: 1px solid #d3d8df;
+  background: #fff;
+  border-radius: 6px;
+  padding: 6px 10px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+button.primary {
+  background: #2b7cff;
+  color: #fff;
+  border-color: #2b7cff;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.settings {
+  margin-top: 12px;
+  background: #fff;
+  border-radius: 8px;
+  padding: 10px;
+  border: 1px solid #e0e4ea;
+}
+
+.settings label {
+  display: flex;
+  flex-direction: column;
+  font-size: 12px;
+  gap: 6px;
+  margin-bottom: 8px;
+}
+
+.hidden {
+  display: none;
+}
+
+.output {
+  margin-top: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+#qrCanvas {
+  background: #fff;
+  border-radius: 8px;
+  border: 1px solid #e0e4ea;
+}
+
+.status {
+  font-size: 12px;
+  color: #5f6670;
+  text-align: center;
+}
+
+.fallback {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  width: 100%;
+}
+
+.fallback button {
+  width: 100%;
+}
