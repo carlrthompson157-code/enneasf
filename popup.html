@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SnapQR</title>
+    <link rel="stylesheet" href="ui.css" />
+  </head>
+  <body data-page="popup">
+    <header class="header">
+      <div>
+        <h1>SnapQR</h1>
+        <p class="subtitle">Captura, comprime y genera QR al instante.</p>
+      </div>
+    </header>
+
+    <section class="panel">
+      <div class="thumbnail" id="thumbnail">
+        <span>Sin captura</span>
+      </div>
+      <div class="controls">
+        <button class="primary" id="capture-full">Capturar Todo</button>
+        <button id="capture-area">Seleccionar Área</button>
+        <button id="toggle-settings">Configuración</button>
+      </div>
+    </section>
+
+    <section class="panel" id="actions-panel">
+      <h2>Acciones rápidas</h2>
+      <div class="controls">
+        <button id="copy-image" disabled>Copiar Imagen</button>
+        <button class="primary" id="generate-qr" disabled>Generar QR</button>
+        <button id="download-image" disabled>Descargar</button>
+      </div>
+      <div class="controls">
+        <button id="copy-text" disabled>Copiar Texto QR</button>
+      </div>
+    </section>
+
+    <section class="panel hidden" id="settings-panel">
+      <h2>Ajustes</h2>
+      <label>
+        Calidad JPEG: <span id="quality-value">0.6</span>
+        <input type="range" id="quality-slider" min="0.1" max="1" step="0.1" value="0.6" />
+      </label>
+      <label>
+        Escala:
+        <select id="scale-select">
+          <option value="1">100%</option>
+          <option value="0.75">75%</option>
+          <option value="0.5">50%</option>
+          <option value="0.25">25%</option>
+        </select>
+      </label>
+    </section>
+
+    <section class="panel" id="qr-panel">
+      <h2>QR generado</h2>
+      <div class="qr-wrapper">
+        <canvas id="qr-canvas" width="240" height="240"></canvas>
+      </div>
+      <p class="status" id="status-message">Esperando captura…</p>
+      <div class="fallback hidden" id="fallback-panel">
+        <p>El contenido no cabe en un QR. ¿Qué deseas hacer?</p>
+        <div class="controls">
+          <button id="upload-temp">Subir a servidor temporal</button>
+          <button id="extract-ocr">Extraer solo texto (OCR)</button>
+        </div>
+      </div>
+    </section>
+
+    <script src="qr.js"></script>
+    <script type="module" src="ui.js"></script>
+  </body>
+</html>
