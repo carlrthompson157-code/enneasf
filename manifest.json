@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "SnapQR Extension",
+  "version": "0.1.0",
+  "description": "Captura pantallas, comprime y genera QR localmente.",
+  "permissions": ["activeTab", "scripting", "storage", "contextMenus"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "SnapQR"
+  },
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "commands": {
+    "capture-visible": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+S"
+      },
+      "description": "Capturar pantalla y generar QR"
+    }
+  },
+  "icons": {}
+}
